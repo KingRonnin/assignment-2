@@ -14,18 +14,17 @@ def main():
     print("HashTable with Chaining: ")
     hash_table = HashTable()
     for key in keys:
-        hash_table.insert(key, len(key))
+        hash_table.insert(key, len(key)) # Inserting key
     
     for key in keys:
-        value = hash_table.search(key)
+        value = hash_table.search(key) # Searching for each key in the hash table
         print(f"Key: {key}, Value: {value}")
     print()
     
     # 3. Salted Hash Function
     print("Salted Hash Function Results: ")
-    salt = "12345" # Example
     for key in keys:
-        print(f"Key: {key}, Salted Hash: {salted_hash(key, salt)}")
+        print(f"Key: {key}, Salted Hash: {salted_hash(key)}")
     
 if __name__ == "__main__":
     main()
